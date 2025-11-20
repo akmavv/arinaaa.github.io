@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Услуги</title><link rel="stylesheet" href="style.css"></head>
+<body>
+    <!-- меню как выше, только class="active" у Услуги -->
+
+    <div class="container">
+        <h1>Наши услуги</h1>
+
+        <div class="tabs">
+            <button class="tab-btn active" data-tab="web">Веб-разработка</button>
+            <button class="tab-btn" data-tab="test">Тестирование</button>
+            <button class="tab-btn" data-tab="design">Дизайн</button>
+        </div>
+
+        <div id="web" class="tab-content active">Разработка сайтов на HTML/CSS/JS</div>
+        <div id="test" class="tab-content">Автоматизация на Selenium</div>
+        <div id="design" class="tab-content">UI/UX дизайн</div>
+    </div>
+
+    <script>
+        document.querySelectorAll('.tab-btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+                document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
+                btn.classList.add('active');
+                document.getElementById(btn.dataset.tab).classList.add('active');
+            });
+        });
+    </script>
+
+    <footer>© 2025 Тестовый сайт для Selenium</footer>
+</body>
+</html>

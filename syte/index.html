@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Главная</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">Тестовый Сайт</div>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="active">Главная</a></li>
+                <li><a href="about.html">О нас</a></li>
+                <li><a href="services.html">Услуги</a></li>
+                <li><a href="portfolio.html">Портфолио</a></li>
+                <li><a href="blog.html">Блог</a></li>
+                <li><a href="gallery.html">Галерея</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+                <li><a href="contact.html">Контакты</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+        <h1>Добро пожаловать на тестовый сайт!</h1>
+        <p>Этот сайт создан специально для лабораторной работы №5 по автоматизации тестирования.</p>
+        
+        <button class="btn" onclick="alert('Кнопка 1 нажата!')">Кнопка 1</button>
+        <button class="btn btn-success">Успешная кнопка</button>
+        <button class="btn btn-danger">Кнопка удаления</button>
+        <a href="contact.html" class="btn">Перейти в контакты</a>
+        <a href="#section2" class="btn">Якорь вниз</a>
+
+        <div style="margin-top:50px;" id="section2">
+            <h2>Быстрые действия</h2>
+            <button class="btn" onclick="document.getElementById('modal1').style.display='flex'">Открыть модальное окно</button>
+        </div>
+    </div>
+
+    <div id="modal1" class="modal">
+        <div class="modal-content">
+            <span class="close-modal" onclick="this.parentElement.parentElement.style.display='none'">×</span>
+            <h2>Привет!</h2>
+            <p>Это модальное окно для теста</p>
+            <button class="btn" onclick="this.parentElement.parentElement.style.display='none'">Закрыть</button>
+        </div>
+    </div>
+
+    <footer>© 2025 Тестовый сайт для Selenium</footer>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Контакты</title><link rel="stylesheet" href="style.css"></head>
+<body>
+    <!-- меню с active у Контакты -->
+
+    <div class="container">
+        <h1>Обратная связь</h1>
+        
+        <form id="contactForm">
+            <input type="text" placeholder="Ваше имя" required id="name">
+            <input type="email" placeholder="Email" required id="email">
+            <input type="tel" placeholder="Телефон">
+
+            <select required>
+                <option value="">Выберите тему</option>
+                <option>Сотрудничество</option>
+                <option>Техподдержка</option>
+                <option>Другое</option>
+            </select>
+
+            <textarea placeholder="Сообщение" rows="5" required></textarea>
+
+            <label><input type="radio" name="type" value="private" checked> Частное лицо</label>
+            <label><input type="radio" name="type" value="company"> Компания</label>
+
+            <label><input type="checkbox" required> Согласен на обработку данных</label>
+
+            <button type="submit" class="btn">Отправить</button>
+            <button type="reset" class="btn btn-danger">Очистить</button>
+        </form>
+
+        <div id="result" style="margin-top:20px; font-weight:bold;"></div>
+    </div>
+
+    <script>
+        document.getElementById('contactForm').onsubmit = function(e) {
+            e.preventDefault();
+            document.getElementById('result').innerHTML = '<p style="color:green;">Форма успешно отправлена (демо)!</p>';
+        }
+    </script>
+    <footer>© 2025 Тестовый сайт для Selenium</footer>
+</body>
+</html>

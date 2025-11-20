@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Галерея</title><link rel="stylesheet" href="style.css"></head>
+<body>
+    <!-- меню -->
+
+    <div class="container">
+        <h1>Галерея</h1>
+        <div style="text-align:center;">
+            <img id="slider" src="https://source.unsplash.com/random/800x400/?nature" alt="slide" style="max-width:100%; border-radius:10px;">
+            <br><br>
+            <button class="btn" onclick="changeSlide(-1)">Предыдущая</button>
+            <button class="btn" onclick="changeSlide(1)">Следующая</button>
+        </div>
+
+        <h2 style="margin-top:50px;">Фильтр по категориям:</h2>
+        <label><input type="checkbox" checked> Природа</label><br>
+        <label><input type="checkbox"> Город</label><br>
+        <label><input type="checkbox"> Люди</label>
+    </div>
+
+    <script>
+        const images = [
+            "https://source.unsplash.com/random/800x400/?nature",
+            "https://source.unsplash.com/random/800x400/?city",
+            "https://source.unsplash.com/random/800x400/?people"
+        ];
+        let i = 0;
+        function changeSlide(n) {
+            i = (i + n + images.length) % images.length;
+            document.getElementById('slider').src = images[i];
+        }
+    </script>
+    <footer>© 2025 Тестовый сайт для Selenium</footer>
+</body>
+</html>

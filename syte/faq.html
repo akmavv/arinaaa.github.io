@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FAQ</title><link rel="stylesheet" href="style.css"></head>
+<body>
+    <!-- меню -->
+
+    <div class="container">
+        <h1>Часто задаваемые вопросы</h1>
+
+        <div class="accordion-header" onclick="this.nextElementSibling.style.display = this.nextElementSibling.style.display==='block'?'none':'block'">
+            Вопрос 1: Как установить Selenium IDE?
+        </div>
+        <div class="accordion-content">Скачайте расширение из Chrome Web Store...</div>
+
+        <div class="accordion-header" onclick="this.nextElementSibling.style.display = this.nextElementSibling.style.display==='block'?'none':'block'">
+            Вопрос 2: Какие браузеры поддерживает WebDriver?
+        </div>
+        <div class="accordion-content">Chrome, Firefox, Edge, Safari...</div>
+
+        <div class="accordion-header" onclick="this.nextElementSibling.style.display = this.nextElementSibling.style.display==='block'?'none':'block'">
+            Вопрос 3: Можно ли запускать тесты параллельно?
+        </div>
+        <div class="accordion-content">Да, через Selenium Grid или NUnit...</div>
+    </div>
+    <footer>© 2025 Тестовый сайт для Selenium</footer>
+</body>
+</html>

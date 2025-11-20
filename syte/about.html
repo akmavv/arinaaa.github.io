@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>О нас</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- то же меню -->
+    <header>
+        <nav>
+            <div class="logo">Тестовый Сайт</div>
+            <ul class="nav-menu">
+                <li><a href="index.html">Главная</a></li>
+                <li><a href="about.html" class="active">О нас</a></li>
+                <!-- остальные пункты такие же -->
+                <li><a href="services.html">Услуги</a></li>
+                <li><a href="portfolio.html">Портфолио</a></li>
+                <li><a href="blog.html">Блог</a></li>
+                <li><a href="gallery.html">Галерея</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+                <li><a href="contact.html">Контакты</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+        <h1>О нас</h1>
+        <p>Мы — команда тестировщиков и разработчиков.</p>
+        <button class="btn" id="showMore">Показать больше информации</button>
+        <div id="moreInfo" style="display:none; margin-top:20px;">
+            <p>Дополнительная информация появилась!</p>
+        </div>
+
+        <h2 style="margin-top:40px;">Выберите язык:</h2>
+        <select id="langSelect">
+            <option>Russian</option>
+            <option>English</option>
+            <option>Deutsch</option>
+        </select>
+    </div>
+
+    <script>
+        document.getElementById('showMore').onclick = function() {
+            document.getElementById('moreInfo').style.display = 'block';
+            this.style.display = 'none';
+        }
+    </script>
+
+    <footer>© 2025 Тестовый сайт для Selenium</footer>
+</body>
+</html>
